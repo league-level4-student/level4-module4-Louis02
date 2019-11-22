@@ -14,7 +14,7 @@
 	a) Create a Polymorph that moves in a circle. hint: Math.sin() Math.cos()
 	b) Create a Polymorph that follows your mouse.
 	c) Create a Polymorph that displays an image.
-	d) Create a Polymorph that displays a JOptionPane message dialog when clicked.
+	d) Create a Polymorph that displays a JOptionPane message dialoug when clicked.
 	
 	
 	

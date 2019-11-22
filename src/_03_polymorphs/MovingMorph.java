@@ -11,14 +11,14 @@ public class MovingMorph extends Polymorph {
 	}
 	
 	public void update(){
-	 	x+=10;
+	 	SetY(GetX()+10);
     }
 
 	@Override
 	public void draw(Graphics g) {
 		// TODO Auto-generated method stub
 		g.setColor(Color.green);
-		g.drawRect(x, y, 50, 50);
+		g.drawRect(GetX(), GetY(), 50, 50);
 	}
 
 }

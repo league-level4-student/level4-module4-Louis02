@@ -21,6 +21,9 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 //	private static Polymorph bluePoly;
 //	private static Polymorph RedPoly;
 //	private static Polymorph movingPoly;
+	Polymorph PolyCircle;
+	Polymorph PolyMouse;
+	Polymorph PolyImage;
 	private static int width = 50;
 	private static int height = 50;
 
@@ -90,7 +93,10 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 //		bluePoly = new BluePolymorph(width, height);
 //		RedPoly = new RedMorph(width, height);
 //		movingPoly  = new MovingMorph(width, height);
-//		
+		PolyCircle = new PolyCircle(width,height);
+		PolyMouse = new PolyMouse(width, height);
+		PolyImage = new PolyImage (width, height);
+		window.addMouseMotionListener((PolyMouse)PolyMouse);
 		timer = new Timer(1000 / 30, this);
 		timer.start();
 		
@@ -107,6 +113,9 @@ for(Polymorph p : pm) {
 //		bluePoly.draw(g);
 //		RedPoly.draw(g);
 //		movingPoly.draw(g);
+PolyCircle.draw(g);
+PolyMouse.draw(g);
+PolyImage.draw(g);
 	}
 
 	@Override
@@ -118,6 +127,8 @@ for(Polymorph p : pm) {
 //		bluePoly.update();
 //		RedPoly.update();
 //		movingPoly.update();
-		
+		PolyCircle.update();
+		PolyMouse.update();
+PolyImage.update();		
 	}
 }
