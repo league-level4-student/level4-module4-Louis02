@@ -19,7 +19,7 @@ public class PolyMouse extends Polymorph implements MouseMotionListener {
 	public void draw(Graphics g) {
 		// TODO Auto-generated method stub
 		g.setColor(Color.red);
-		g.drawRect(GetX(), GetY(), 20, 20);
+		//g.drawRect(GetX(), GetY(), 20, 20);
 	}
 public void update() {
 		SetX(mx);

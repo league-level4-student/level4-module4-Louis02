@@ -24,7 +24,7 @@ BufferedImage img;
 	public void draw(Graphics g) {
 		// TODO Auto-generated method stub
 		g.setColor(Color.yellow);
-		g.drawImage(img, 50, 50, 250, 250, null);
+		//g.drawImage(img, 50, 50, 250, 250, null);
 	}
 
 }
