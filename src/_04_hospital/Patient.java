@@ -1,15 +1,16 @@
 package _04_hospital;
 
 public class Patient {
+	boolean check = false;
 
-	public Object feelsCaredFor() {
+	public boolean feelsCaredFor() {
 		// TODO Auto-generated method stub
-		return null;
+		return check;
 	}
 
 	public void checkPulse() {
 		// TODO Auto-generated method stub
-		
+		check = true;
 	}
 
 }

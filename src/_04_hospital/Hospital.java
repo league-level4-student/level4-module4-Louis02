@@ -6,7 +6,7 @@ import java.util.List;
 public class Hospital {
 	ArrayList<Doctor> DocSize = new ArrayList<Doctor>();
 	ArrayList<Patient> PatSize = new ArrayList<Patient>();
-
+	int currentDoc = 0;
 	public void addDoctor(GeneralPractitioner generalPractitioner) {
 		// TODO Auto-generated method stub
 		new GeneralPractitioner();
@@ -25,9 +25,19 @@ public class Hospital {
 		return ans;
 	}
 
-	public void addPatient(Patient patient) {
+	public void addPatient(Patient patient) throws DoctorFullException {
 		// TODO Auto-generated method stub
 		PatSize.add(patient);
+		
+		for(int i = 0; i<DocSize.size();i++) {
+			try {
+			DocSize.get(i).assignPatient(patient);
+			}
+			catch(DoctorFullException e){
+				currentDoc++;
+				i--;
+			}
+		}
 	}
 
 	public List<Patient> getPatients() {

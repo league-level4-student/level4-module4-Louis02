@@ -18,8 +18,12 @@ ArrayList<Patient> PatSize = new ArrayList<Patient>();
 
 	public void assignPatient(Patient patient)throws DoctorFullException {
 		// TODO Auto-generated method stub
-		new Patient();
+		if(PatSize.size()>=3) {
+			throw new DoctorFullException();
+		}
+		
 		PatSize.add(patient);
+		
 	}
 
 	public List<Patient> getPatients() {
@@ -29,7 +33,9 @@ ArrayList<Patient> PatSize = new ArrayList<Patient>();
 
 	public void doMedicine() {
 		// TODO Auto-generated method stub
-		
+		for(int i = 0 ; i<PatSize.size();i++) {
+			PatSize.get(i).checkPulse();
+		}
 	}
 
 }
